@@ -1,10 +1,16 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import {Button} from 'react-native-paper';
 
 const Home = () => {
   return (
     <View>
-      <Text> Hi </Text>
+      <Button
+        icon="camera"
+        mode="contained"
+        onPress={() => console.log('Pressed')}>
+        Press me
+      </Button>
     </View>
   );
 };
