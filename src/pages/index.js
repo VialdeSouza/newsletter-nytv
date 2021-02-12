@@ -14,10 +14,6 @@ const Home = () => {
         <ListItem />
         <ListItem />
       </ScrollView>
-      <View style={{flexDirection: 'row'}}>
-        <ButtonCard title="Tecnologia" active />
-        <ButtonCard title="Ciência" />
-      </View>
     </SafeAreaView>
   );
 };
