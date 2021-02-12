@@ -1,17 +1,15 @@
 import React from 'react';
-import {View} from 'react-native';
-import {Button} from 'react-native-paper';
+import {SafeAreaView, View} from 'react-native';
+import ButtonCard from '../components/ButtonCard';
 
 const Home = () => {
   return (
-    <View>
-      <Button
-        icon="camera"
-        mode="contained"
-        onPress={() => console.log('Pressed')}>
-        Press me
-      </Button>
-    </View>
+    <SafeAreaView>
+      <View style={{flexDirection: 'row'}}>
+        <ButtonCard title="Tecnologia" />
+        <ButtonCard title="Ciência" />
+      </View>
+    </SafeAreaView>
   );
 };
 
