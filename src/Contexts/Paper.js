@@ -6,7 +6,14 @@ const PaperContext = ({children}) => {
   const MyTheme = {
     ...DefaultTheme,
     colors: {
-      primary: '#000',
+      primary: '#E50091',
+      accent: '#F4C118',
+      background: '#F8F9FA',
+      backdrop: '#FFFFFF',
+    },
+    fonts: {
+      medium: 'Slabo13px-Regular',
+      redular: 'Roboto-Regular',
     },
   };
   return (

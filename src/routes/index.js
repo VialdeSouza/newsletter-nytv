@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {useTheme} from 'react-native-paper';
 import HomeScreen from '../pages/index';
 
 const Tab = createMaterialBottomTabNavigator();
@@ -10,16 +11,17 @@ const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
 function Home({title}) {
+  const {colors, fonts} = useTheme();
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#FFFFFF',
+          backgroundColor: colors.backdrop,
         },
         headerTitleAlign: 'center',
-        headerTintColor: '#E50091',
+        headerTintColor: colors.primary,
         headerTitleStyle: {
-          fontWeight: 'bold',
+          fontFamily: fonts.medium,
         },
       }}>
       <Stack.Screen name="Home" component={HomeScreen} options={{title}} />
@@ -28,11 +30,12 @@ function Home({title}) {
 }
 
 const Routes = () => {
+  const {colors} = useTheme();
   return (
     <NavigationContainer>
       <Tab.Navigator
-        activeColor="#E50091"
-        barStyle={{backgroundColor: '#FFFFFF'}}>
+        activeColor={colors.primary}
+        barStyle={{backgroundColor: colors.backdrop}}>
         <Tab.Screen
           name="Tecnologia"
           options={{
