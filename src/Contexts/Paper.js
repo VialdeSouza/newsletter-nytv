@@ -12,8 +12,8 @@ const PaperContext = ({children}) => {
       backdrop: '#FFFFFF',
     },
     fonts: {
-      medium: 'Slabo13px-Regular',
-      redular: 'Roboto-Regular',
+      medium: {fontFamily: 'Slabo13px-Regular'},
+      regular: {fontFamily: 'Roboto-Regular'},
     },
   };
   return (

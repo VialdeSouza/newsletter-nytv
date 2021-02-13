@@ -10,17 +10,21 @@ const styles = () => {
       elevation: 0,
       backgroundColor: colors.primary,
     },
-    description: {
-      fontFamily: fonts.regular,
-      color: colors.backdrop,
+    descriptionStyle: {
+      ...fonts.regular,
       textAlign: 'justify',
+      color: colors.backdrop,
     },
-    title: {
-      fontFamily: fonts.medium,
+    titleStyle: {
+      ...fonts.medium,
       color: colors.accent,
+      lineHeight: 25,
     },
     actions: {
       justifyContent: 'flex-end',
+    },
+    content: {
+      marginTop: 5,
     },
   });
 };

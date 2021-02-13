@@ -15,9 +15,7 @@ const HomeRoute = ({title}) => {
         },
         headerTitleAlign: 'center',
         headerTintColor: colors.primary,
-        headerTitleStyle: {
-          fontFamily: fonts.medium,
-        },
+        headerTitleStyle: fonts.medium,
       }}>
       <Stack.Screen name="Home" component={HomeScreen} options={{title}} />
     </Stack.Navigator>

@@ -11,11 +11,11 @@ const styles = () => {
       justifyContent: 'center',
     },
     descriptionStyle: {
-      fontFamily: fonts.medium,
+      ...fonts.regular,
       textAlign: 'justify',
     },
     titleStyle: {
-      fontFamily: fonts.medium,
+      ...fonts.medium,
     },
   });
 };
