@@ -1,12 +1,12 @@
 import React from 'react';
-import PaperContext from './src/Contexts/Paper';
+import PaperProvider from './src/Contexts/Paper';
 import Routes from './src/routes';
 
 const App: () => React$Node = () => {
   return (
-    <PaperContext>
+    <PaperProvider>
       <Routes />
-    </PaperContext>
+    </PaperProvider>
   );
 };
 

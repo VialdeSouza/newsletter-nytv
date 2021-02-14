@@ -1,8 +1,8 @@
 import React from 'react';
-import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
+import {DefaultTheme, Provider} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const PaperContext = ({children}) => {
+const PaperProvider = ({children}) => {
   const MyTheme = {
     ...DefaultTheme,
     colors: {
@@ -17,14 +17,14 @@ const PaperContext = ({children}) => {
     },
   };
   return (
-    <PaperProvider
+    <Provider
       settings={{
         icon: (props) => <Icon {...props} size={25} />,
       }}
       theme={MyTheme}>
       {children}
-    </PaperProvider>
+    </Provider>
   );
 };
 
-export default PaperContext;
+export default PaperProvider;
