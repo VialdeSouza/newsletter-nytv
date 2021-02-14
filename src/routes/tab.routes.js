@@ -6,29 +6,31 @@ import Home from '../pages';
 
 const Tab = createMaterialBottomTabNavigator();
 
-const tabRoutes = [
-  {name: 'Tecnologia', icon: 'memory'},
-  {name: 'Ciência', icon: 'science'},
-];
-
 const TabRoutes = () => {
   const {colors} = useTheme();
   return (
     <Tab.Navigator
       activeColor={colors.primary}
       barStyle={{backgroundColor: colors.backdrop}}>
-      {tabRoutes.map((config) => (
-        <Tab.Screen
-          key={config.name}
-          name={config.name}
-          component={Home}
-          options={{
-            tabBarIcon: ({color}) => (
-              <Icon name={config.icon} color={color} size={26} />
-            ),
-          }}
-        />
-      ))}
+      <Tab.Screen
+        name="technology"
+        component={Home}
+        options={{
+          tabBarIcon: ({color}) => (
+            <Icon name="memory" color={color} size={26} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="science"
+        component={Home}
+        options={{
+          tabBarIcon: ({color}) => (
+            <Icon name="science" color={color} size={26} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };

@@ -1,15 +1,19 @@
 import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+import {
+  NavigationContainer,
+  getFocusedRouteNameFromRoute,
+} from '@react-navigation/native';
 import {useTheme} from 'react-native-paper';
-import {NavigationContainer} from '@react-navigation/native';
-import Reader from '../pages/reader';
 import TabRoutes from './tab.routes';
+import Reader from '../pages/reader';
 
 const Stack = createStackNavigator();
 
-const HomeRoute = () => {
+const Routes = () => {
   const {colors, fonts} = useTheme();
-  const options = {
+
+  const optionsStackNavigator = {
     headerStyle: {
       backgroundColor: colors.backdrop,
     },
@@ -18,10 +22,28 @@ const HomeRoute = () => {
     headerTitleStyle: fonts.medium,
   };
 
+  const getHeaderTitle = (route) => {
+    const routeName = getFocusedRouteNameFromRoute(route) ?? 'technology';
+    switch (routeName) {
+      case 'technology':
+        return 'Tecnologia';
+      case 'science':
+        return 'Ciência';
+      default:
+        break;
+    }
+  };
+
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={options}>
-        <Stack.Screen name="Home" component={TabRoutes} />
+      <Stack.Navigator screenOptions={optionsStackNavigator}>
+        <Stack.Screen
+          name="Home"
+          component={TabRoutes}
+          options={({route}) => ({
+            headerTitle: getHeaderTitle(route),
+          })}
+        />
         <Stack.Screen
           name="Reader"
           component={Reader}
@@ -34,4 +56,4 @@ const HomeRoute = () => {
     </NavigationContainer>
   );
 };
-export default HomeRoute;
+export default Routes;
