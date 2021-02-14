@@ -13,7 +13,9 @@ const Home = () => {
 
   const size = news.length;
   const randomIndex = Math.floor(Math.random() * size);
-
+  const readerNews = (url) => {
+    navigation.navigate('Reader', {url});
+  };
   const feacthNews = async () => {
     try {
       setstateApp('loading');
@@ -31,6 +33,7 @@ const Home = () => {
   useEffect(() => {
     feacthNews();
   }, []);
+
   if (stateApp === 'loading') {
     return <></>;
   }
@@ -41,15 +44,14 @@ const Home = () => {
           url={news[randomIndex].multimedia[0].url}
           title={news[randomIndex].title}
           description={news[randomIndex].abstract}
+          onPress={() => readerNews(news[randomIndex].url)}
         />
 
         {news.map((item) => (
           <ListItem
             title={item.title}
             description={item.abstract}
-            onPress={() => {
-              navigation.navigate('Reader');
-            }}
+            onPress={() => readerNews(item.url)}
           />
         ))}
       </ScrollView>
