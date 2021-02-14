@@ -4,6 +4,8 @@ import {useNavigation, useRoute} from '@react-navigation/native';
 import axios from 'axios';
 import Card from '../components/Card';
 import ListItem from '../components/ListItem';
+import keyNyTimes from '../../apiKey';
+import SkeletonHome from '../components/Skeletons/home';
 
 const Home = () => {
   const nameRoute = useRoute().name;
@@ -13,20 +15,20 @@ const Home = () => {
 
   const size = news.length;
   const randomIndex = Math.floor(Math.random() * size);
+
   const readerNews = (url) => {
     navigation.navigate('Reader', {url});
   };
   const feacthNews = async () => {
     try {
       setstateApp('loading');
-      const key = process.env.KEY_NYTIMES;
       const {data} = await axios.get(
-        `https://api.nytimes.com/svc/topstories/v2/${nameRoute}.json?api-key=${key}`,
+        `https://api.nytimes.com/svc/topstories/v2/${nameRoute}.json?api-key=${keyNyTimes}`,
       );
       setNews(data.results);
       setstateApp('ready');
     } catch (error) {
-      setstateApp('error');
+      setstateApp('loading');
     }
   };
 
@@ -35,7 +37,7 @@ const Home = () => {
   }, []);
 
   if (stateApp === 'loading') {
-    return <></>;
+    return <SkeletonHome />;
   }
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -49,8 +51,10 @@ const Home = () => {
 
         {news.map((item) => (
           <ListItem
+            key={item.title}
             title={item.title}
             description={item.abstract}
+            byline={item.byline}
             onPress={() => readerNews(item.url)}
           />
         ))}

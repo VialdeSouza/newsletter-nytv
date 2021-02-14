@@ -17,6 +17,11 @@ const styles = () => {
     titleStyle: {
       ...fonts.medium,
     },
+    author: {
+      position: 'absolute',
+      bottom: -15,
+      right: 0,
+    },
   });
 };
 export default styles;
