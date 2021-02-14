@@ -1,8 +1,8 @@
 import React from 'react';
-import PaperProvider from './src/Contexts/Paper';
+import PaperProvider from './src/Contexts/paper';
 import Routes from './src/routes';
 
-const App: () => React$Node = () => {
+const App = () => {
   return (
     <PaperProvider>
       <Routes />

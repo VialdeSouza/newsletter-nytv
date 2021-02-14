@@ -16,6 +16,7 @@ const TabRoutes = () => {
         name="technology"
         component={Home}
         options={{
+          tabBarLabel: 'tecnologia',
           tabBarIcon: ({color}) => (
             <Icon name="memory" color={color} size={26} />
           ),
@@ -26,6 +27,7 @@ const TabRoutes = () => {
         name="science"
         component={Home}
         options={{
+          tabBarLabel: 'ciência',
           tabBarIcon: ({color}) => (
             <Icon name="science" color={color} size={26} />
           ),

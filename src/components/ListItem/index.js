@@ -1,15 +1,16 @@
+import PropTypes from 'prop-types';
 import * as React from 'react';
 import {List} from 'react-native-paper';
 import useStyles from './styles';
 
-const ListItem = ({onPress}) => {
+const ListItem = ({onPress, title, description}) => {
   const styles = useStyles();
 
   return (
     <List.Item
       onPress={onPress}
-      title="Pazuello nega no Senado ter recebido relatos sobre falta de oxigênio no AM"
-      description="Ministro disse que soube de problema em rede de distribuição; senador rebateu."
+      title={title}
+      description={description}
       titleNumberOfLines={2}
       descriptionNumberOfLines={3}
       descriptionStyle={styles.descriptionStyle}
@@ -17,6 +18,12 @@ const ListItem = ({onPress}) => {
       style={styles.item}
     />
   );
+};
+
+ListItem.propTypes = {
+  description: PropTypes.string.isRequired,
+  onPress: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default ListItem;
