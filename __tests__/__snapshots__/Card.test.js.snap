@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should be render image cover 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#6200ee",
+      "borderRadius": 4,
+      "elevation": 0,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexGrow": 1,
+        "flexShrink": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#eeeeee",
+            "height": 195,
+            "overflow": "hidden",
+          },
+          Object {
+            "borderTopLeftRadius": 4,
+            "borderTopRightRadius": 4,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        siblings={
+          Array [
+            "withTheme(Card.Cover)",
+            "Card.Content",
+            "Card.Actions",
+          ]
+        }
+        source={
+          Object {
+            "uri": "https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=625&q=80",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "flex": 1,
+              "height": undefined,
+              "justifyContent": "flex-end",
+              "padding": 16,
+              "resizeMode": "cover",
+              "width": undefined,
+            },
+            Object {
+              "borderTopLeftRadius": 4,
+              "borderTopRightRadius": 4,
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "paddingHorizontal": 16,
+          },
+          undefined,
+          Object {
+            "marginTop": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        numberOfLines={2}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontFamily": "System",
+              "fontWeight": "400",
+              "textAlign": "left",
+            },
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "System",
+                "fontWeight": "500",
+                "textAlign": "left",
+                "writingDirection": "ltr",
+              },
+              Array [
+                Object {
+                  "fontSize": 20,
+                  "letterSpacing": 0.15,
+                  "lineHeight": 30,
+                  "marginVertical": 2,
+                },
+                Object {
+                  "color": "#03dac4",
+                  "fontFamily": "System",
+                  "fontWeight": "500",
+                  "lineHeight": 25,
+                },
+              ],
+            ],
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        numberOfLines={3}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontFamily": "System",
+              "fontWeight": "400",
+              "textAlign": "left",
+            },
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "System",
+                "fontWeight": "400",
+                "textAlign": "left",
+                "writingDirection": "ltr",
+              },
+              Array [
+                Object {
+                  "fontSize": 14,
+                  "letterSpacing": 0.25,
+                  "lineHeight": 20,
+                  "marginVertical": 2,
+                },
+                Object {
+                  "color": "rgba(0, 0, 0, 0.5)",
+                  "fontFamily": "System",
+                  "fontWeight": "400",
+                  "textAlign": "justify",
+                },
+              ],
+            ],
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      index={2}
+      siblings={
+        Array [
+          "withTheme(Card.Cover)",
+          "Card.Content",
+          "Card.Actions",
+        ]
+      }
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 8,
+          },
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+      total={3}
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID="button"
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 25,
+              },
+              Object {
+                "color": "#FFFF",
+              },
+              Object {
+                "fontFamily": "Material Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

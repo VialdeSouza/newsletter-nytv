@@ -20,7 +20,7 @@ const MainCard = ({title, description, url, onPress}) => {
         </Paragraph>
       </Card.Content>
       <Card.Actions style={styles.actions}>
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity testID='button' onPress={onPress}>
           <Icon name="arrow-right-alt" size={25} style={{color: '#FFFF'}} />
         </TouchableOpacity>
       </Card.Actions>
