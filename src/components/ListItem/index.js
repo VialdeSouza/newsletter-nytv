@@ -23,7 +23,7 @@ const ListItem = ({onPress, title, description, byline}) => {
 
 ListItem.propTypes = {
   description: PropTypes.string.isRequired,
-  onPress: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   byline: PropTypes.string.isRequired,
 };
