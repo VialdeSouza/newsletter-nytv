@@ -59,15 +59,27 @@ export default keyNyTimes;
 ```
 Há um arquivo apiKey.exemplo.js para você utilizar como exemplo. 
 
+Feito isto, execute o projeto com:
+
+```shell
+$ npx react-native run-android
+```
 
 Testes
 =====
 Usando como guia a documentação as seguintes documentações: 
-- <a href="https://reactnative.dev/docs/testing-overview">Teste Reac Native</a>
+- <a href="https://reactnative.dev/docs/testing-overview">Teste React Native</a>
 - <a href="https://jestjs.io/docs/pt-BR/tutorial-react-native">Jest</a>
 - <a href="https://callstack.github.io/react-native-testing-library/">React Native Testing Library</a>
 
 Escrevi testes unitário dos componentes essenciais para aplicação, que são: ListItem e Card. Testei a renderezição dos components e as props.
+
+
+Para executar os testes use:
+
+```shell
+$ npm test
+```
 
 
 <p align="center">=)</p>
