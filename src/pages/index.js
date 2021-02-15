@@ -6,6 +6,7 @@ import Card from '../components/Card';
 import ListItem from '../components/ListItem';
 import keyNyTimes from '../../apiKey';
 import SkeletonHome from '../components/Skeletons/home';
+import Error from '../components/Erros';
 
 const Home = () => {
   const nameRoute = useRoute().name;
@@ -28,7 +29,7 @@ const Home = () => {
       setNews(data.results);
       setstateApp('ready');
     } catch (error) {
-      setstateApp('loading');
+      setstateApp('error');
     }
   };
 
@@ -36,6 +37,9 @@ const Home = () => {
     feacthNews();
   }, []);
 
+  if (stateApp === 'error') {
+    return <Error />;
+  }
   if (stateApp === 'loading') {
     return <SkeletonHome />;
   }

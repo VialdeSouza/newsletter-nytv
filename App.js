@@ -1,5 +1,5 @@
 import React from 'react';
-import PaperProvider from './src/Contexts/paper';
+import PaperProvider from './src/Contexts/Paper';
 import Routes from './src/routes';
 
 const App = () => {
