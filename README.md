@@ -68,3 +68,6 @@ Usando como guia a documentação as seguintes documentações:
 - <a href="https://callstack.github.io/react-native-testing-library/">React Native Testing Library</a>
 
 Escrevi testes unitário dos componentes essenciais para aplicação, que são: ListItem e Card. Testei a renderezição dos components e as props.
+
+
+<p align="center">=)</p>
