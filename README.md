@@ -3,6 +3,9 @@
 </h1>
 <p align="center">🚀 Aplicação mobile que lista artigos atuais de uma seção especificada do The New York Times</p>
 
+![Sem título](https://user-images.githubusercontent.com/38055818/122083276-ba732f00-cdce-11eb-878a-b1e3e6be0ff2.png)
+
+
 Guia
 =================
 <!--ts-->
